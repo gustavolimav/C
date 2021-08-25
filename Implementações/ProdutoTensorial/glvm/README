@@ -1,0 +1,55 @@
+# Produto Serial
+
+## Programa para multiplicar de maneira serial duas matrizes
+## de tamanho indefinido e introduzidos pelo usuário em dois
+## arquivos distintos. O output do programa apresenta as
+## três formas a seguir de multiplicação das matrizes e seu
+## respectivo tempo de execução.
+
+1. serial;
+2. via múltiplos processos, criados a partir do comando fork(),e utilizando o compartilhamento de memória;
+3. via múltiplos processos, criados a partir do comando fork(), e utilizando pipes;
+
+SOBRE
+
+* Regras para arquivos das matrix
+    1. Importante que os arquivos contenham apenas inteiros e que exista uma linha em branco no final do arquivo.
+    2. Após o último elemento deve existir uma quebra de linha sem nenhum espaço em branco.
+
+* Conteúdos:
+         fun.c, fun.h, makefile and tensor_glvm.c.
+
+* Como usar:  
+         1. Crie ou coloque dois arquivos que contenham matrizes na pasta.
+         2. Utilize o comando "make" para compilar o programa.
+         3. Utilize o comando "./tensor [file1] [file2]" com o nome dos dois arquivos que você deseja utilizar.
+         4. Caso as matrizes sejam válidas, abra o arquivo "mult_glvm.out" e receba o resultado.
+         5. Limpe todos os arquivos criados com "make cleanAll" ou todos menos o "mult_glvm.out" com o comando "make clean".
+
+   * Pre Requisitos: 
+         gcc e make.
+
+* Tecnologias:
+         C e Makefile.
+
+fun.c:
+    Arquivo com as funções que o "tensor_glvm.c" utilizará.
+
+fun.h:
+    Arquivo que faz a ligação entre o "fun.c" e o "tensor_glvm.c" inicializando as funções
+    e incluindo as bibliotecas que serão utilizadas.
+
+Makefile:
+    Arquivo que compila o programa utilizando o comando "make" e limpa utilizando "make clean" ou o "make cleanAll".
+
+tensor_glvm.c:
+    Arquivo principal que executa o Poduto Serial de quatro maneiras diferentes.
+
+tensor_glvm.out:
+    Arquivo que será gerado se as matrizes estiverem corretas e puderem ser multiplicadas.
+    O conteúdo desse arquivo vai ser o output do programa "tensor_glvm.c".
+
+Pasta matrizesTest: 
+    Arquivos com matrizes para teste.
+
+Implementado em um WSL Linux.
